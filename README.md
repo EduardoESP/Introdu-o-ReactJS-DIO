@@ -47,3 +47,131 @@ Atualização
 Desmontagem
 
 ## Aula 2 WebPAc
+**Instalando package.json**
+No terminal
+npm init
+
+**Criação do arquivo webpack.config.js**
+
+npm i -D webpack webpack-cli
+
+npm install --save-dev webpack webpack-cli
+
+**Criar no visual studio no projeto o seguinte arquivo**
+
+webpack.config.js
+
+**Edite o packege.json**
+
+em scripts escreva "build":"webpack --mode production" e apague oq estiver lá dentro
+
+**Edite o webpack.config.js**
+
+const path = require('path')
+
+module.exports = {
+ entry: './teste.js', caminho do do arquivo de largada do projeto
+ output:{
+     path: path.resolve(__dirname, 'dist'),  // OBS: dois underline
+     filename: 'bundle.js'
+ }
+}
+
+**Instale os plugins**
+
+npm install -D html-webpack-plugin
+
+**Inicie a build**
+
+npm run build
+
+**Adicionar o babel dentro do projeto**
+
+npm i @babel/core babel-loader @babel/present-env @babel/present-react --save-dev
+ou
+npm install -D babel-loader @babel/core
+ @babel/preset-env
+ @babel/preset-react
+@babel/preset-env @babel/plugin-proposal-class-properties 
+@babel/plugin-transform-react-jsx
+
+**Adicionando mais comandos ao Webpack.config**
+const path = require('path')
+
+module.exports = {
+ entry: './src/index.js',
+ output:{
+     path: path.resolve(__dirname, 'dist'),
+     filename: 'bundle.js'
+ },
+ module:{
+    rules: [
+        {
+            test:/\.(js|jsx)$/,
+            exclude: /node_modules/,
+            use: {
+                loader: "babel-loader"
+            }
+        }
+    ]
+
+},
+
+}
+
+**Cria o Index.html**
+Estrutura html 5 com a div com o id app
+
+**criar App.JS**
+
+**criar Index.js**
+ com as devidas importações e o render()
+
+**Criar o arquivo .babelrc**
+adcionar os presets
+
+{
+    "presents":[
+        "@babel/preset-env",
+        "@babel/preset-react"
+    ]
+}
+
+**instarlar React react-DOM**
+
+npm i react react-dom
+
+**rodar**
+
+npm run dev
+
+npm rum start:dev
+
+## Aula 2.1 Instalação do ESLint
+
+**No terminal**
+
+npm instal --save eslint babel-eslint eslint-plugin-react eslint-watch
+
+**adciona no pac...jason**
+em script
+eslint": "eslint .src/*.js"
+
+**em wbpack confi**
+serve para visualização de erros
+
+module.exports = {
+    devtool: 'source.map'
+.
+.
+.
+
+
+npm run eslint
+
+
+## Aula 3 
+
+### 3.1 Renderizando condicional
+
+
