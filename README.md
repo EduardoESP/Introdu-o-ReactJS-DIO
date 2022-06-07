@@ -166,6 +166,8 @@ module.exports = {
 .
 .
 
+**No package.jason**
+/*"webpack-dev-server":"^3.7.2"*/
 
 npm run eslint
 
@@ -174,4 +176,5 @@ npm run eslint
 
 ### 3.1 Renderizando condicional
 
+Criado condicional ternario, testando utilizando os modulos
 
