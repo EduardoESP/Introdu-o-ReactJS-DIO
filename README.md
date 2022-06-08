@@ -178,3 +178,8 @@ npm run eslint
 
 Criado condicional ternario, testando utilizando os modulos
 
+### 3.2 Listas e chaves
+
+
+
+
